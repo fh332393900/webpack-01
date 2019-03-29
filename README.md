@@ -1,2 +1,3 @@
 # webpack-01
-webpack学习
+学习webpack配置
+学习TypeScript
