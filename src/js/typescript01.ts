@@ -61,3 +61,4 @@ class Animal {
 }
 
 console.log(new Animal("dog").name)
+
