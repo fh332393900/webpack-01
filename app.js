@@ -18,6 +18,7 @@ axios.get('https://c.y.qq.com/v8/fcg-bin/v8.fcg?g_tk=5381&inCharset=utf-8&outCha
 
  http.createServer(function (request,response) {
     response.setHeader('Access-Control-Allow-Origin', '*');
+    response.setHeader("Access-Control-Allow-Credentials", "true");
     //response.writeHead("Content-Type", "application/json;charset=utf-8");
     response.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'});
 

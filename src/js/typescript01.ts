@@ -54,11 +54,35 @@ declare var require: {
       callback: (require: <T>(path: string) => T) => void
     ) => void;
   };
-
+//类
 class Animal {
   public name: string;
-  constructor(theName: string) { this.name = theName; }
+  public type:string = 'animal';
+  //构造函数，
+  constructor(theName: string) { 
+    this.name = theName; 
+  }
+  public move(distance:number){
+    console.log(this.name+" move "+distance+"m ")
+  }
+  private changeType(){
+    this.type = 'aaaaa'
+  }
 }
-
+//继承，继承了Animal的属性和方法
+class Horse extends Animal{
+  constructor(name:string){
+    super(name)
+  }
+}
+let whiteHorse = new Horse("whiteHorse");
+whiteHorse.move(2000);
+let cat = new Animal('cat');
+cat.move(50)
 console.log(new Animal("dog").name)
-
+const p = {
+  a:'jjk',
+  b:"lll"
+}
+p.a = "dsadas"
+delete p.b
